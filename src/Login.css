@@ -1,0 +1,113 @@
+#signin {
+    color: blanchedalmond;
+    font-size: 30px;
+}
+.image {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn:hover{
+    background-color: #04AA6D;
+    border: 2px solid black;
+    text-shadow: none;
+    color: black;
+}
+
+.loginForm{
+    color: white;
+    width: 300px;
+    margin-left: 5%;
+    padding-top: 125px;
+}
+
+.heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    
+}
+
+.username, .pwd{
+    width: auto;
+    height: 40px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.loginForm input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.loginForm input::placeholder{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.forgotpwd a{
+    color: grey;
+    float: right;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.forgotpwd a:hover{
+    text-decoration: underline;
+}
+
+.loginBtn{
+    width: 50%;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 15px;
+    outline: none;
+    background: black;
+    color: white;
+    border: 2px solid #04AA6D;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loginBtn{
+    align-items: center;
+}
+.loginBtn:hover{
+    background-color: #04AA6D;
+}
+
+.loginForm .Register{
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    margin-top: 30px;
+    font-size: smaller;
+}
+
+
+.Register a{
+    color: grey;
+    text-decoration: underline;
+}
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+

@@ -1,0 +1,16 @@
+body{
+    font-family: 'Poppins';
+}
+.contactForm input {
+    font-weight: 900;
+    color: black;
+}
+
+#head1 {
+    font-size: 50px;
+}
+
+#head2 {
+    font-size: 30px; 
+    color: #800000;
+}

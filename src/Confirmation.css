@@ -1,0 +1,10 @@
+#dispmsgdiv {
+    text-align: center;
+}
+#okbutton {
+    color: blanchedalmond;
+    text-decoration: none;
+    border: 2px solid #ffebcd;
+    font-weight: 900;
+    width: 100px;
+}

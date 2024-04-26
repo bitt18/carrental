@@ -1,13 +1,628 @@
+
 body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width:100%;
+  height: 100%;
+  background: linear-gradient(grey, 1%, black);
+  overflow: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #800000;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  width:100%;
+  height: 100%;
+  background: linear-gradient(grey, 1%, black);
+  overflow: scroll;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: black;
+  gap: 2rem;
+}
+
+.grp1{
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.navbar a{
+  padding: 14px;
+  color: #F0EAD6;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+#websiteName{
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #800000;
+  font-family: title;    
+}
+
+.content:hover{
+  text-shadow: 0px 0px 1px white;
+  font-weight: 900;
+  color: #800000;
+
+}
+
+.grp2{
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: 2px solid #04AA6D;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.grp2:hover{
+  background-color: black;
+  border: 2px solid #800000;
+  text-shadow: none;
+  color: #800000;
+  font-weight: 700;
+}
+
+.grp2 a:hover{
+  color:#800000;
+  font-weight:700;
+}
+
+.tagline{
+  color: #F0EAD6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.search{
+  
+  width: auto;
+  height: 40px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin: 50px;
+  position: relative;
+  top: 10px;
+
+}
+
+.search input{
+  width: 25%;
+  height: 100%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 5px 20px 5px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search input::placeholder{
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+.search label{
+  color: #F0EAD6;
+}
+
+.search .date{
+  position: relative;
+  top: 30px;
+}
+
+#drop,#return-date{
+  position: relative;
+  left:80px
+}
+
+.search .btn{
+  width: 10%;
+  height: 40px;
+  position: relative;
+  top: 155px;
+  right: 140px;
+  float: right;
+  border-radius: 15px;
+  outline: none;
+  background: black;
+  color: white;
+  border: 2px solid #04AA6D;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button{
+  align-items: center;
+}
+
+.btn:hover{
+  background-color: #04AA6D;
+  border: 2px solid black;
+  text-shadow: none;
+  color: black;
+}
+
+.loginForm{
+  color: white;
+  width: 300px;
+  margin-left: 5%;
+  padding-top: 125px;
+}
+
+.heading{
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  
+}
+
+.username, .pwd{
+  width: auto;
+  height: 40px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.loginForm input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding-left: 20px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.loginForm input::placeholder{
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.forgotpwd a{
+  color: grey;
+  float: right;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.forgotpwd a:hover{
+  text-decoration: underline;
+}
+
+.loginBtn{
+  width: 50%;
+  height: 60px;
+  margin-top: 30px;
+  border-radius: 15px;
+  outline: none;
+  background: black;
+  color: white;
+  border: 2px solid #04AA6D;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.temp1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.loginBtn{
+  align-items: center;
+}
+.loginBtn:hover{
+  background-color: #04AA6D;
+}
+
+.loginForm .Register{
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+  margin-top: 30px;
+  font-size: smaller;
+}
+
+
+.Register a{
+  color: grey;
+  text-decoration: underline;
+}
+
+.image img{
+  height: auto;
+  width: 60%;
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+.registerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerPage{
+  color: #F0EAD6;
+  font-weight: 900;
+  width: 300px;
+  padding-top: 50px;
+}
+
+.registerPage h1{
+  font-family: 'Poppins', sans-serif;;
+  font-size: 40px;
+  font-weight: 00;
+  text-align: center;
+}
+
+.registerPage label{
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+}
+
+
+.registerPage input{
+  height: 25px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding-left: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: black;
+  font-weight: 900;
+}
+
+.registerPage input::placeholder{
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.registerPage button{
+  width: 40%;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 35%;
+  border-radius: 15px;
+  outline: none;
+  background: black;
+  color: white;
+  border: 2px solid #04AA6D;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:hover{
+  background-color: #04AA6D;
+  color: white;
+}
+
+.vehicleContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carImg {
+  width: 70%;
+}
+
+.specsCard {
+  border: 2px solid blanchedalmond;
+  border-radius: 10px;
+  border-color: blanchedalmond;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+  height: auto;
+}
+
+.specsCard:hover{
+  border-color: #800000;
+}
+
+.cars {
+  padding-left: 100px;
+}
+
+
+.Models {
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 50px;
+}
+
+.carImg {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.specs {
+  color:#ffebcd;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnContainer .loginBtn{
+  width: 30%;
+}
+
+.servicePage{
+  padding-top: 10px;
+}
+
+.servicePage h2{
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 30px;
+}
+
+.aboutUs{
+  color: blanchedalmond;
+  text-align: center;
+}
+
+
+
+.contactContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactForm{
+  width: 50%;
+  border: 1px solid blanchedalmond;
+  border-radius: 25px;
+}
+
+
+.contactForm input{
+  height: 25px;
+  width: 35%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding-left: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: black;
+  font-weight: 900;
+}
+
+textarea{
+  border-radius: 20px;
+  width: 300px;
+}
+
+.booknowContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicenow{
+  border: 1px solid white;
+  width: 700px;
+  height: auto;
+  color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booknow{
+  border: 1px solid white;
+  width: 50%;
+  margin-bottom: 50px;
+  color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookform{
+  width: 50%;
+  font-weight: 900;
+}
+
+.bookform input{
+  color: black;
+  font-weight: 900;
+}
+
+.booknowTitle{
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 30px;
+}
+
+.formBorder input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.formBorder input::placeholder{
+  color: black;
+  opacity: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formBorder h3, .disclaimer{
+  text-align: center;
+  font-size: 20px;
+}
+
+.tag {
+  font-size: 75px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden1 {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 2s;
+}
+
+.show1 {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.carlogo:nth-child(2) {
+  transition-delay: 200ms;
+}
+.carlogo:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.cartype:nth-child(2) {
+  transition-delay: 200ms;
+}
+.cartype:nth-child(3) {
+  transition-delay: 400ms;
+}
+.cartype:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.enlarge {
+  transition: all 0.4s;
+}
+
+.enlarge:hover {
+  transform: scale(1.2);
+}
+
+.accordion {
+  margin: -50px;
+  width: 300px;
+  padding-bottom: 100px;
+}
+
+.accordion li{
+  list-style: none;
+  width: 100%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  background: black;
+}
+
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+label::before{
+  content: '+';
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.accordion .specscontent {
+  padding: 0px 5px;
+  font-size: 18px;
+  line-height: 10px;
+  max-height: 0;
+  overflow: hidden;
+  font-weight: 900;
+  color: blanchedalmond;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.specscontent:hover {
+  color: #800000;
+}
+
+.accordion input[type="checkbox"]:checked + label + .specscontent {
+  max-height: 20px;
+  padding: 0px 10px 20px;
+}
+
+.accordion input[type="checkbox"]:checked + label::before {
+  content: '-';
+}
+
+/* .animationboi {
+
+} */
+
+#disclaimers {
+  color: #800000; 
+  font-weight: 900;
 }
